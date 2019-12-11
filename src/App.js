@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Create from './components/Create';
 import TodosList from './components/TodosList';
 import './App.css';
@@ -19,10 +19,15 @@ function App() {
     setTodos(updatedTodos);
   };
 
+  const updateTodo = (text, index) => {
+    todos[index] = text;
+    setTodos(todos)
+  }
+
   return (
     <div className="App">
       <h1 className="app-header">Todos Hooks</h1>
-      <p className="app-description">A Todo app created in React using only hooks and localStorage!</p>
+      <p className="app-description">A Todo app created in React using only hooks!</p>
       <Create
         list={todos}
         add={addTodo}
@@ -30,6 +35,7 @@ function App() {
       <TodosList
         list={todos}
         remove={removeTodo}
+        update={updateTodo}
       />
     </div>
   );

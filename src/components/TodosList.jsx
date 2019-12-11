@@ -1,7 +1,7 @@
 import React from 'react';
 import Todo from './Todo';
 
-function TodosList({ list, remove }) {
+function TodosList({ list, remove, update }) {
   return (
     <div className="list-container">
       {!list.length ? (
@@ -13,6 +13,7 @@ function TodosList({ list, remove }) {
             index={index}
             todo={todo}
             remove={remove}
+            update={update}
           />
         ))
       )}
