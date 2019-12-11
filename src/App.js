@@ -11,13 +11,13 @@ function App() {
   ]);
 
   const addTodo = text => {
-    const newTodos = [...todos, text];
-    setTodos(newTodos);
+    setTodos([...todos, text]);
   };
 
-  // useEffect(() => {
-  //   document.title = `You clicked ${count} times`;
-  // });
+  const removeTodo = text => {
+    const updatedTodos = todos.filter(todo => todo !== text);
+    setTodos(updatedTodos);
+  };
 
   return (
     <div className="App">
@@ -29,7 +29,7 @@ function App() {
       />
       <TodosList
         list={todos}
-        addTodo={addTodo}
+        remove={removeTodo}
       />
     </div>
   );
