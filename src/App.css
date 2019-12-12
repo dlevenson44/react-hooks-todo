@@ -49,6 +49,29 @@ body {
   margin-right: 20%;
 }
 
+.icon {
+  padding-right: 5px;
+}
+
+.icon:hover {
+  cursor: pointer;
+}
+
+.tooltip {
+  background-color: #00004D;
+  color: #49FCE4;
+}
+
+.tooltip:hover {
+  background-color: #00004D;
+  color: #49FCE4;
+  border: hidden;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
 .todo-item {
   margin-right: 100px;
   width: 550px;
