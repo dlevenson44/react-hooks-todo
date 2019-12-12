@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 function Todo({ index, todo, remove, update }) {
   const [isEditing, setEdit] = useState(false);
@@ -10,23 +10,23 @@ function Todo({ index, todo, remove, update }) {
   };
 
   return (
-    <div>
+    <div className="item">
       {!isEditing ? (
-        <div>
-          <p className="todo-item">{text}</p>
-          <ion-icon name="create" onClick={() => setEdit(!isEditing)} />
-          <ion-icon name="trash" onClick={() => remove(todo)} />
+        <div className="item-container">
+          <p className="todo-item bright-color">{text}</p>
+          <ion-icon name="create" size="large" class="bright-color" onClick={() => setEdit(!isEditing)} />
+          <ion-icon name="trash" size="large" class="bright-color" onClick={() => remove(todo)} />
         </div>
       ) : (
-        <div>
+        <div className="item-container">
           <input
-            id="create-field"
+            className="todo-edit bright-color"
             placeholder="Create New Item"
             value={text}
             onChange={e => setText(e.target.value)}
           />
-          <ion-icon name="create" onClick={() => updateTask(text, index)} />
-          <ion-icon name="close-circle" onClick={() => setEdit(!isEditing)} />
+          <ion-icon name="create" class="bright-color" onClick={() => updateTask(text, index)} />
+          <ion-icon name="close-circle" class="bright-color" onClick={() => setEdit(!isEditing)} />
         </div>
       )}
       
