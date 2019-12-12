@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Header, Label } from 'semantic-ui-react'
+import { Container, Header } from 'semantic-ui-react'
 import Create from './components/Create';
 import TodosList from './components/TodosList';
 import 'semantic-ui-css/semantic.min.css';
