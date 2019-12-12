@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import { Container, Header, Label } from 'semantic-ui-react'
 import Create from './components/Create';
 import TodosList from './components/TodosList';
+import 'semantic-ui-css/semantic.min.css';
 import './App.css';
 
 function App() {
@@ -25,9 +27,20 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <h1 className="app-header">Todos Hooks</h1>
-      <p className="app-description">A Todo app created in React using only hooks!</p>
+    <Container textAlign="center" text={true}>
+      <Header 
+        as="h1"
+        dividing={true}
+        id="header"
+      >
+        Todos Hooks
+      </Header>
+      <Header 
+        as="h4"
+        id="sub-header"
+      >
+        A Todo app created in React using only hooks!
+      </Header>
       <Create
         list={todos}
         add={addTodo}
@@ -37,7 +50,7 @@ function App() {
         remove={removeTodo}
         update={updateTodo}
       />
-    </div>
+    </Container>
   );
 }
 

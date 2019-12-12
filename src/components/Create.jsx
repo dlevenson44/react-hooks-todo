@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Input, Button } from 'semantic-ui-react'
 
 function Create({ add }) {
   const [text, setText] = useState('');
@@ -10,14 +11,16 @@ function Create({ add }) {
   }
   return (
     <div className="create-container">
-      <input
+      <Input
         id="create-field"
         placeholder="Create New Item"
         value={text}
         onChange={e => setText(e.target.value)}
+        size="mini"
+        inverted={true}
       />
       <button
-        className="create-button"
+        id="create-button"
         disabled={isButtonDisabled}
         onClick={() => addTask(text)}
       >
