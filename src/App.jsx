@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Header } from 'semantic-ui-react'
+import { Container, Header } from 'semantic-ui-react';
 import Create from './components/Create';
 import TodosList from './components/TodosList';
 import 'semantic-ui-css/semantic.min.css';
@@ -7,35 +7,35 @@ import './App.css';
 
 function App() {
   const [todos, setTodos] = useState([
-    "Learn about React",
-    "Meet friend for lunch",
-    "Build really cool todo app",
+    'Learn about React',
+    'Meet friend for lunch',
+    'Build really cool todo app',
   ]);
 
-  const addTodo = text => {
+  const addTodo = (text) => {
     setTodos([...todos, text]);
   };
 
-  const removeTodo = text => {
-    const updatedTodos = todos.filter(todo => todo !== text);
+  const removeTodo = (text) => {
+    const updatedTodos = todos.filter((todo) => todo !== text);
     setTodos(updatedTodos);
   };
 
   const updateTodo = (text, index) => {
     todos[index] = text;
-    setTodos(todos)
-  }
+    setTodos(todos);
+  };
 
   return (
-    <Container textAlign="center" text={true}>
-      <Header 
+    <Container textAlign="center" text>
+      <Header
         as="h1"
-        dividing={true}
+        dividing
         id="header"
       >
         Todos Hooks
       </Header>
-      <Header 
+      <Header
         as="h4"
         id="sub-header"
       >
