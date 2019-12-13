@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Container } from 'semantic-ui-react';
 import Todo from './Todo';
 
@@ -21,5 +22,11 @@ function TodosList({ list, remove, update }) {
     </Container>
   );
 }
+
+TodosList.propTypes = {
+  list: PropTypes.array.isRequired,
+  remove: PropTypes.func.isRequired,
+  update: PropTypes.func.isRequired,
+};
 
 export default TodosList;

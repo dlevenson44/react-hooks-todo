@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import { Popup } from 'semantic-ui-react';
 
 function Todo({ index, todo, remove, update }) {
@@ -71,5 +72,12 @@ function Todo({ index, todo, remove, update }) {
     </div>
   );
 }
+
+Todo.propTypes = {
+  index: PropTypes.number.isRequired,
+  todo: PropTypes.string.isRequired,
+  remove: PropTypes.func.isRequired,
+  update: PropTypes.func.isRequired,
+};
 
 export default Todo;

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import { Input, Button } from 'semantic-ui-react'
 
 function Create({ add }) {
@@ -29,5 +30,10 @@ function Create({ add }) {
     </div>
   );
 }
+
+Create.propTypes = {
+  list: PropTypes.array.isRequired,
+  add: PropTypes.func.isRequired,
+};
 
 export default Create;
