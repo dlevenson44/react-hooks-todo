@@ -24,6 +24,7 @@ body {
 
 #create-field::placeholder {
   color: #49FCE4;
+  background-color: #00004D;
   font-weight: bolder;
   font-size: 14px;
 }
@@ -45,7 +46,7 @@ body {
 
 .item-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   margin-right: 20%;
 }
 
@@ -75,11 +76,16 @@ body {
 .todo-item {
   margin-right: 100px;
   width: 550px;
+  font-size: 20px;
 }
 
-.todo-item {
-  font-size: 20px;
-  margin-right: 100px;
+.todo-edit {
+  margin-right: 35%;
+  margin-left: 20%;
+  background-color: #00004D;
+  border: hidden;
+  border-bottom: 2px solid;
+  width: 178px;
 }
 
 .bright-color {
