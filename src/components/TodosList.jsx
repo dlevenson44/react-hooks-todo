@@ -1,7 +1,6 @@
 import React from 'react';
 import { Container } from 'semantic-ui-react';
 import Todo from './Todo';
-// import 'semantic-ui-css/semantic.min.css';
 
 function TodosList({ list, remove, update }) {
   return (
@@ -11,7 +10,7 @@ function TodosList({ list, remove, update }) {
       ) : (
         list.map((todo, index) => (
           <Todo
-            key={index}
+            key={todo}
             index={index}
             todo={todo}
             remove={remove}
