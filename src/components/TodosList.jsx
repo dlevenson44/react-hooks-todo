@@ -24,7 +24,7 @@ function TodosList({ list, remove, update }) {
 }
 
 TodosList.propTypes = {
-  list: PropTypes.array.isRequired,
+  list: PropTypes.arrayOf.isRequired,
   remove: PropTypes.func.isRequired,
   update: PropTypes.func.isRequired,
 };

@@ -2,15 +2,22 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Popup } from 'semantic-ui-react';
 
-function Todo({ index, todo, remove, update }) {
+function Todo({
+  index, todo, remove, update,
+}) {
   const [isEditing, setEdit] = useState(false);
   const [isComplete, setComplete] = useState(false);
   const [text, setText] = useState(todo);
-
-  function updateTask(text, index) {
-    update(text, index);
-    setEdit(!isEditing);
+  const style = {
+    backgroundColor: 'rgba(0,0,0,0)',
+    color: '#49FCE4',
+    border: 'hidden',
   };
+
+  function updateTask(task, idx) {
+    update(task, idx);
+    setEdit(!isEditing);
+  }
 
   return (
     <div className="item">
@@ -20,25 +27,24 @@ function Todo({ index, todo, remove, update }) {
           <Popup
             content="Complete Task"
             size="tiny"
-            style={{ 'backgroundColor': 'rgba(0,0,0,0)', 'color': '#49FCE4', 'border': 'hidden' }}
-            basic={true}
-            trigger={isComplete ? 
-              <ion-icon name="checkbox" size="large" class="icon bright-color" onClick={() => setComplete(!isComplete)} /> :
-              <ion-icon name="square-outline" size="large" class="icon bright-color" onClick={() => setComplete(!isComplete)} />
-            }
+            style={{ style }}
+            basic
+            trigger={isComplete
+              ? <ion-icon name="checkbox" size="large" class="icon bright-color" onClick={() => setComplete(!isComplete)} />
+              : <ion-icon name="square-outline" size="large" class="icon bright-color" onClick={() => setComplete(!isComplete)} />}
           />
           <Popup
             content="Edit Task"
             size="tiny"
-            style={{ 'backgroundColor': 'rgba(0,0,0,0)', 'color': '#49FCE4', 'border': 'hidden' }}
-            basic={true}
+            style={{ style }}
+            basic
             trigger={<ion-icon name="create" size="large" class="icon bright-color" onClick={() => setEdit(!isEditing)} />}
           />
           <Popup
             content="Remove Task"
             size="tiny"
-            style={{ 'backgroundColor': 'rgba(0,0,0,0)', 'color': '#49FCE4', 'border': 'hidden' }}
-            basic={true}
+            style={{ style }}
+            basic
             trigger={<ion-icon name="trash" size="large" class="icon bright-color" onClick={() => remove(todo)} />}
           />
         </div>
@@ -48,27 +54,26 @@ function Todo({ index, todo, remove, update }) {
             className="todo-edit bright-color"
             placeholder="Create New Item"
             value={text}
-            onChange={e => setText(e.target.value)}
+            onChange={(e) => setText(e.target.value)}
           />
           <div className="popup-container">
             <Popup
               content="Submit Edit"
               size="tiny"
-              style={{ 'backgroundColor': 'rgba(0,0,0,0)', 'color': '#49FCE4', 'border': 'hidden' }}
-              basic={true}
+              style={{ style }}
+              basic
               trigger={<ion-icon name="create" size="large" class="icon bright-color" onClick={() => updateTask(text, index)} />}
             />
             <Popup
               content="Cancel Edit"
               size="tiny"
-              style={{ 'backgroundColor': 'rgba(0,0,0,0)', 'color': '#49FCE4', 'border': 'hidden' }}
-              basic={true}
+              style={{ style }}
+              basic
               trigger={<ion-icon name="close-circle" size="large" class="icon bright-color" onClick={() => setEdit(!isEditing)} />}
             />
           </div>
         </div>
       )}
-      
     </div>
   );
 }

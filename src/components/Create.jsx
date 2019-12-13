@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Input, Button } from 'semantic-ui-react'
+import { Input } from 'semantic-ui-react';
 
 function Create({ add }) {
   const [text, setText] = useState('');
-  const isButtonDisabled = !text.length ? true : false;
+  const isButtonDisabled = !text.length;
 
-  function addTask(text) {
+  function addTask() {
     add(text);
     setText('');
   }
@@ -16,14 +16,15 @@ function Create({ add }) {
         id="create-field"
         placeholder="Create New Item"
         value={text}
-        onChange={e => setText(e.target.value)}
+        onChange={(e) => setText(e.target.value)}
         size="mini"
-        inverted={true}
+        inverted
       />
       <button
+        type="submit"
         id="create-button"
         disabled={isButtonDisabled}
-        onClick={() => addTask(text)}
+        onClick={() => addTask()}
       >
         Add New Item
       </button>
@@ -32,7 +33,6 @@ function Create({ add }) {
 }
 
 Create.propTypes = {
-  list: PropTypes.array.isRequired,
   add: PropTypes.func.isRequired,
 };
 
