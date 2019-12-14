@@ -27,7 +27,7 @@ function Todo({
           <Popup
             content="Complete Task"
             size="tiny"
-            style={{ style }}
+            style={style}
             basic
             trigger={isComplete
               ? <ion-icon name="checkbox" size="large" class="icon bright-color" onClick={() => setComplete(!isComplete)} />
@@ -36,14 +36,14 @@ function Todo({
           <Popup
             content="Edit Task"
             size="tiny"
-            style={{ style }}
+            style={style}
             basic
             trigger={<ion-icon name="create" size="large" class="icon bright-color" onClick={() => setEdit(!isEditing)} />}
           />
           <Popup
             content="Remove Task"
             size="tiny"
-            style={{ style }}
+            style={style}
             basic
             trigger={<ion-icon name="trash" size="large" class="icon bright-color" onClick={() => remove(todo)} />}
           />
@@ -60,14 +60,14 @@ function Todo({
             <Popup
               content="Submit Edit"
               size="tiny"
-              style={{ style }}
+              style={style}
               basic
               trigger={<ion-icon name="create" size="large" class="icon bright-color" onClick={() => updateTask(text, index)} />}
             />
             <Popup
               content="Cancel Edit"
               size="tiny"
-              style={{ style }}
+              style={style}
               basic
               trigger={<ion-icon name="close-circle" size="large" class="icon bright-color" onClick={() => setEdit(!isEditing)} />}
             />
