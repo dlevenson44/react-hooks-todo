@@ -6,10 +6,13 @@ function Create({ add }) {
   const [text, setText] = useState('');
   const isButtonDisabled = !text.length;
 
-  function addTask() {
-    add(text);
-    setText('');
+  function addTask(e) {
+    if (!e || e === 13) {
+      add(text);
+      setText('');
+    }
   }
+
   return (
     <div className="create-container">
       <Input
@@ -17,6 +20,7 @@ function Create({ add }) {
         placeholder="Create New Item"
         value={text}
         onChange={(e) => setText(e.target.value)}
+        onKeyPress={(e) => addTask(e.charCode)}
         size="mini"
         inverted
       />
