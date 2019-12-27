@@ -19,7 +19,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint '**/*.{js,jsx}'",
-    "predeploy": "yarn run build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "homepage": "https://dlevenson44.github.io/react-hooks-todos",
