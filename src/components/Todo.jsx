@@ -14,9 +14,11 @@ function Todo({
     border: 'hidden',
   };
 
-  function updateTask(task, idx) {
-    update(task, idx);
-    setEdit(!isEditing);
+  function updateTask(task, idx, e) {
+    if (!e || e === 13) {
+      update(task, idx);
+      setEdit(!isEditing);
+    }
   }
 
   return (
@@ -55,6 +57,8 @@ function Todo({
             placeholder="Create New Item"
             value={text}
             onChange={(e) => setText(e.target.value)}
+            onClick={() => updateTask(text, index)}
+            onKeyPress={(e) => updateTask(text, index, e)}
           />
           <div className="popup-container">
             <Popup
