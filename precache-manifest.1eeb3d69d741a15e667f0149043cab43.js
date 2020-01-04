@@ -1,31 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "dc4c8fda75f5b135ed27bf55ad8c3f1a",
+    "revision": "17e501fdb86bdc15e77d10ddd2d2cde7",
     "url": "/react-hooks-todos/index.html"
   },
   {
-    "revision": "cfdd606594ac51fa0b5a",
+    "revision": "df8a701dd1f6ddad5787",
     "url": "/react-hooks-todos/static/css/2.1d6c0d33.chunk.css"
   },
   {
-    "revision": "849aa66bc0993ff936f3",
-    "url": "/react-hooks-todos/static/css/main.f9661806.chunk.css"
+    "revision": "06d72d3fe05a05a7271f",
+    "url": "/react-hooks-todos/static/css/main.f6d85477.chunk.css"
   },
   {
-    "revision": "cfdd606594ac51fa0b5a",
-    "url": "/react-hooks-todos/static/js/2.1d83fce2.chunk.js"
+    "revision": "df8a701dd1f6ddad5787",
+    "url": "/react-hooks-todos/static/js/2.79c2e1f4.chunk.js"
   },
   {
     "revision": "0286b8a2f013faea43a755147f571c65",
-    "url": "/react-hooks-todos/static/js/2.1d83fce2.chunk.js.LICENSE"
+    "url": "/react-hooks-todos/static/js/2.79c2e1f4.chunk.js.LICENSE"
   },
   {
-    "revision": "849aa66bc0993ff936f3",
-    "url": "/react-hooks-todos/static/js/main.5d14123d.chunk.js"
+    "revision": "06d72d3fe05a05a7271f",
+    "url": "/react-hooks-todos/static/js/main.809e3fb6.chunk.js"
   },
   {
-    "revision": "f92a5423eed9c0f36190",
-    "url": "/react-hooks-todos/static/js/runtime-main.d4523fd4.js"
+    "revision": "63b351102bb3f2b422ec",
+    "url": "/react-hooks-todos/static/js/runtime-main.1290c331.js"
   },
   {
     "revision": "13db00b7a34fee4d819ab7f9838cc428",
