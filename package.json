@@ -22,7 +22,7 @@
     "predeploy": "yarn run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://dlevenson44.github.io/react-hooks-todos",
+  "homepage": "https://dlevenson44.github.io/react-hooks-todo",
   "eslintConfig": {
     "extends": "react-app"
   },
