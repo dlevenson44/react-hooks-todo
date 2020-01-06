@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/react-hooks-todo/static/css/main.f6d85477.chunk.css",
-    "main.js": "/react-hooks-todo/static/js/main.6effe9a7.chunk.js",
-    "main.js.map": "/react-hooks-todo/static/js/main.6effe9a7.chunk.js.map",
-    "runtime-main.js": "/react-hooks-todo/static/js/runtime-main.bae31fb8.js",
-    "runtime-main.js.map": "/react-hooks-todo/static/js/runtime-main.bae31fb8.js.map",
+    "main.css": "/react-hooks-todo/static/css/main.f9661806.chunk.css",
+    "main.js": "/react-hooks-todo/static/js/main.392c61cf.chunk.js",
+    "main.js.map": "/react-hooks-todo/static/js/main.392c61cf.chunk.js.map",
+    "runtime-main.js": "/react-hooks-todo/static/js/runtime-main.fc9bcb59.js",
+    "runtime-main.js.map": "/react-hooks-todo/static/js/runtime-main.fc9bcb59.js.map",
     "static/css/2.e8718752.chunk.css": "/react-hooks-todo/static/css/2.e8718752.chunk.css",
-    "static/js/2.79c2e1f4.chunk.js": "/react-hooks-todo/static/js/2.79c2e1f4.chunk.js",
-    "static/js/2.79c2e1f4.chunk.js.map": "/react-hooks-todo/static/js/2.79c2e1f4.chunk.js.map",
+    "static/js/2.1d83fce2.chunk.js": "/react-hooks-todo/static/js/2.1d83fce2.chunk.js",
+    "static/js/2.1d83fce2.chunk.js.map": "/react-hooks-todo/static/js/2.1d83fce2.chunk.js.map",
     "index.html": "/react-hooks-todo/index.html",
-    "precache-manifest.441f0d8045e1d1860ab378758109acbe.js": "/react-hooks-todo/precache-manifest.441f0d8045e1d1860ab378758109acbe.js",
+    "precache-manifest.4a7c4d4d92e4ac7226fff3f3ff21a432.js": "/react-hooks-todo/precache-manifest.4a7c4d4d92e4ac7226fff3f3ff21a432.js",
     "service-worker.js": "/react-hooks-todo/service-worker.js",
     "static/css/2.e8718752.chunk.css.map": "/react-hooks-todo/static/css/2.e8718752.chunk.css.map",
-    "static/css/main.f6d85477.chunk.css.map": "/react-hooks-todo/static/css/main.f6d85477.chunk.css.map",
-    "static/js/2.79c2e1f4.chunk.js.LICENSE": "/react-hooks-todo/static/js/2.79c2e1f4.chunk.js.LICENSE",
+    "static/css/main.f9661806.chunk.css.map": "/react-hooks-todo/static/css/main.f9661806.chunk.css.map",
+    "static/js/2.1d83fce2.chunk.js.LICENSE": "/react-hooks-todo/static/js/2.1d83fce2.chunk.js.LICENSE",
     "static/media/semantic.min.css": "/react-hooks-todo/static/media/outline-icons.ef60a4f6.woff"
   },
   "entrypoints": [
-    "static/js/runtime-main.bae31fb8.js",
+    "static/js/runtime-main.fc9bcb59.js",
     "static/css/2.e8718752.chunk.css",
-    "static/js/2.79c2e1f4.chunk.js",
-    "static/css/main.f6d85477.chunk.css",
-    "static/js/main.6effe9a7.chunk.js"
+    "static/js/2.1d83fce2.chunk.js",
+    "static/css/main.f9661806.chunk.css",
+    "static/js/main.392c61cf.chunk.js"
   ]
 }
