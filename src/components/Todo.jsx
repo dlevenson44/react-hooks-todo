@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import { Popup } from 'semantic-ui-react';
 
 function Todo({
   index, todo, remove, update,
 }) {
+  const inputRef = useRef(null);
   const [isEditing, setEdit] = useState(false);
   const [isComplete, setComplete] = useState(false);
   const [text, setText] = useState(todo);
@@ -13,6 +14,12 @@ function Todo({
     color: '#49FCE4',
     border: 'hidden',
   };
+
+  useEffect(() => {
+    if (isEditing) {
+      inputRef.current.focus();
+    }
+  }, [isEditing]);
 
   function updateTask(task, idx, e) {
     if (!e || e === 13) {
@@ -25,7 +32,7 @@ function Todo({
     <div className="item">
       {!isEditing ? (
         <div className="item-container">
-          <p className={`todo-item bright-color ${isComplete ? 'completed' : ''}`}>{text}</p>
+          <p className={`todo-item bright-color ${isComplete ? 'completed' : ''}`}>{todo}</p>
           <Popup
             content="Complete Task"
             size="tiny"
@@ -59,6 +66,7 @@ function Todo({
             onChange={(e) => setText(e.target.value)}
             onClick={() => updateTask(text, index)}
             onKeyPress={(e) => updateTask(text, index, e)}
+            ref={inputRef}
           />
           <div className="popup-container">
             <Popup
