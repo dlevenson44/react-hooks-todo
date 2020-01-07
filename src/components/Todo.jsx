@@ -21,6 +21,11 @@ function Todo({
     }
   }, [isEditing]);
 
+  function cancelEdit() {
+    setEdit(!isEditing);
+    setText(todo);
+  }
+
   function updateTask(task, idx, e) {
     if (!e || e === 13) {
       update(task, idx);
@@ -32,7 +37,7 @@ function Todo({
     <div className="item">
       {!isEditing ? (
         <div className="item-container">
-          <p className={`todo-item bright-color ${isComplete ? 'completed' : ''}`}>{todo}</p>
+          <p className={`todo-item bright-color ${isComplete ? 'completed' : ''}`}>{text}</p>
           <Popup
             content="Complete Task"
             size="tiny"
@@ -81,7 +86,7 @@ function Todo({
               size="tiny"
               style={style}
               basic
-              trigger={<ion-icon name="close-circle" size="large" class="icon bright-color" onClick={() => setEdit(!isEditing)} />}
+              trigger={<ion-icon name="close-circle" size="large" class="icon bright-color" onClick={() => cancelEdit()} />}
             />
           </div>
         </div>
